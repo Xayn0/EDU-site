@@ -8,19 +8,19 @@ const VideoPlayer = ({
   playState: boolean;
   setPlayState: Dispatch<SetStateAction<boolean>>;
 }) => {
-
   const player = useRef<HTMLDivElement>(null);
-const closePlayer = (e:React.MouseEvent<HTMLDivElement>) => {
-  
-if(e.target === player.current){
-  setPlayState(false);
-
-
-}
-}
+  const closePlayer = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === player.current) {
+      setPlayState(false);
+    }
+  };
   return (
-    <div className={`video-player ${playState ? "" : "hide"}`} onClick={closePlayer}>
-      <div className=""></div>
+    <div
+      className={`video-player ${playState ? "" : "hide"}`}
+      onClick={closePlayer}
+      ref={player}
+    >
+      
       <video src={video} autoPlay muted controls></video>
     </div>
   );

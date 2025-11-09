@@ -3,10 +3,10 @@ import "../../Components/Footer/footer.css";
 const Footer = () => {
   return (
     <div className="footer">
-      <p>© Xayn solutions all rights reserved</p>
+      <p>© Zayn all rights reserved</p>
       <ul>
-        <li>Terms of Service</li>
-        <li>Privacy Policy</li>
+        <li> لكروم ووداعة ودبيازة</li>
+        <li>مع اطيب التحيات</li>
       </ul>
     </div>
   );
