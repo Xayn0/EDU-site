@@ -8,38 +8,30 @@ import Testimonials from "./Components/Testimonials/testimonials";
 import Contact from "./Components/Contact/contact";
 import Footer from "./Components/Footer/footer";
 import { Link, Element } from "react-scroll";
+import VideoPlayer from "./Components/Video Player/video-player";
+import { useState } from "react";
+
 function App() {
+  const [playState , setPlayState] = useState(false);
   return (
     <>
-
       <Navbar />
 
       <Hero />
 
       <div className="container">
-
         <Title subTitle="our program" title="what we offer" />
-
         <Programs />
-
-        <About />
-
+        <About setPlayState = {setPlayState}/>
         <Title subTitle="Gallery" title="Campus Pics" />
-
         <Campus />
-
         <Title subTitle="Testimonials" title="What Our Students Say" />
-
         <Testimonials />
-
         <Title subTitle="Contact Us" title="Ask Anything" />
-
         <Contact />
-
         <Footer />
-
+        <VideoPlayer playState ={playState} setPlayState={setPlayState}/>
       </div>
-      
     </>
   );
 }

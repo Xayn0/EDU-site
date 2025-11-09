@@ -1,10 +1,29 @@
-import React from "react";
+import React, { Dispatch, SetStateAction, useRef } from "react";
 import "./video-player.css";
-const VideoPlayer = () => {
-  return <div className="video-player">
+import video from "../../assets/video-profile.mp4";
+const VideoPlayer = ({
+  playState,
+  setPlayState,
+}: {
+  playState: boolean;
+  setPlayState: Dispatch<SetStateAction<boolean>>;
+}) => {
 
-    <video src={}></video>
-  </div>;
+  const player = useRef<HTMLDivElement>(null);
+const closePlayer = (e:React.MouseEvent<HTMLDivElement>) => {
+  
+if(e.target === player.current){
+  setPlayState(false);
+
+
+}
+}
+  return (
+    <div className={`video-player ${playState ? "" : "hide"}`} onClick={closePlayer}>
+      <div className=""></div>
+      <video src={video} autoPlay muted controls></video>
+    </div>
+  );
 };
 
 export default VideoPlayer;
