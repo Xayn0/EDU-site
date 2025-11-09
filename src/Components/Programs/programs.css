@@ -40,3 +40,14 @@
   opacity: 1;
   transition: all 0.3s ease-in-out;
 }
+
+/* media query  */
+@media (max-width: 650px) {
+  .programs {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .program {
+    flex-basis: 100%;
+  }
+}
