@@ -6,8 +6,7 @@ import location_icon from "../../assets/location-icon.png";
 import white_arrow from "../../assets/white-arrow.png";
 import React, { FormEvent } from "react";
 const Contact = () => {
-  let key = "dfdb198d-2c82-4a94-8d6e-687708836e48";
-
+  
   const [result, setResult] = React.useState("");
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {

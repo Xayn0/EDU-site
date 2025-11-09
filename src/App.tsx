@@ -7,7 +7,6 @@ import Campus from "./Components/Campus/campus";
 import Testimonials from "./Components/Testimonials/testimonials";
 import Contact from "./Components/Contact/contact";
 import Footer from "./Components/Footer/footer";
-import { Link, Element } from "react-scroll";
 import VideoPlayer from "./Components/Video Player/video-player";
 import { useState } from "react";
 
