@@ -12,7 +12,7 @@ const Navbar = () => {
   }, []);
   const [mobileMenu, setMobileMenu] = useState(false);
   const toggleMenu = () => {
-    mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
+    setMobileMenu(!mobileMenu);
   };
   return (
     <nav className={`container ${sticky ? "dark-nav" : ""}`}>
@@ -20,27 +20,27 @@ const Navbar = () => {
       <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li>
           <Link to="hero" smooth={true} duration={500} offset={0}>
-            <button className="">Home</button>
+            Home
           </Link>
         </li>
         <li>
           <Link to="programs" smooth={true} duration={500} offset={-260}>
-            <button className="">Program</button>
+            Programs
           </Link>
         </li>
         <li>
           <Link to="about" smooth={true} duration={500} offset={-150}>
-            <button className=""> About Us</button>
+            About Us
           </Link>
         </li>
         <li>
           <Link to="campus" smooth={true} duration={500} offset={-260}>
-            <button className="">Campus</button>
+            Campus
           </Link>
         </li>
         <li>
           <Link to="testimonials" smooth={true} duration={500} offset={-260}>
-            <button className="">Testimonials</button>
+            Testimonials
           </Link>
         </li>
         <li>
